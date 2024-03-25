@@ -1,0 +1,146 @@
+{
+	/* https://docs.avaloniaui.net/docs/reference/controls/detailed-reference */
+	"BoxLayout":{
+		"prefix": "<WrapPanel>",
+		"body": [
+			"<WrapPanel Orientation=\"${1:Horizontal}\">",
+			"\t$0",
+			"</WrapPanel>",
+		]
+	},
+	"StackLayout": {
+		"prefix": "<StackPanel>",
+		"body": [
+			"<StackPanel>",
+			"\t$0",
+			"</StackPanel>"
+		]
+	},
+	"GridLayout": {
+		"prefix": "<Grid>",
+		"body": [
+			"<Grid>",
+			"\t$0",
+			"</Grid>"
+		]
+	},
+	"ScrollViewer": {
+		"prefix": "<ScrollViewer>",
+		"body": [
+			"<ScrollViewer>",
+			"\t$0",
+			"</ScrollViewer>"
+		]
+	},
+	"LabelWidget": {
+		"prefix": "<Label>",
+		"body": [
+			"<Label",
+			"\tContent=\"${1:Text}\"",
+			"\tHorizontalContentAlignment=\"Center\"",
+            "\tVerticalContentAlignment=\"Center\"",
+			"\tFontFamily=\"Meiryo UI\"",
+			"/>$0"
+		]
+	},
+	"TabControlWidget": {
+		"prefix": "<TabControl>",
+		"body": [
+			"<TabControl Margin=\"${1:5}\">",
+			"\t<TabItem Header=\"${2:Title}\">",
+			"\t\t${0:YourProcessing}",
+			"\t</TabItem>",
+			"</TabControl>"
+		]
+	},
+	"TabItemWidget": {
+		"prefix": "<TabItem>",
+		"body": [
+			"<TabItem Header=\"${2:Title}\">",
+			"\t${0:YourProcessing}",
+			"</TabItem>"
+		]
+	},
+	"Calendar[Nomal]": {
+		"prefix": "<CalenderDatePicker[Nomal]>",
+		"body": [
+			"<StackPanel Margin=\"20\">",
+			"\t<CalenderDatePicker />",
+			"</StackPanel>"
+		]
+	},
+	"Calendar[MultipleRange]": {
+		"prefix": "<Calendar>",
+		"body": [
+			"<StackPanel Margin=\"20\">",
+			"\t<Calendar SelectionMode=\"MultipleRange\"/>",
+			"</StackPanel>"
+		]
+	},
+	"TextBoxWidget":{
+		"prefix": "<TextBox>",
+		"body": [
+			"<StackPanel Margin=\"20\">",
+			"\t<TextBlock Margin=\"0 5\"  FontFamily=\"Meiryo UI\">${1:TextBoxTitle}:</TextBlock>",
+			"\t<TextBox Watermark=\"${2:TextBoxHint}\"/>",
+			"</StackPanel>"
+		]
+	},
+	"TextBoxItem": {
+		"prefix": "<TextBoxItem>",
+		"body":[
+			"<TextBlock Margin=\"0 5\"  FontFamily=\"Meiryo UI\">${1:TextBoxTitle}:</TextBlock>",
+			"<TextBox Watermark=\"${2:TextBoxHint}\"/>"
+		]
+	},
+	"TextBoxItem[PassWord]":{
+		"prefix": "<TextBox>",
+		"body": [
+			"\t<TextBlock Margin=\"0 5\"  FontFamily=\"Meiryo UI\">${1:Password}:</TextBlock>",
+			"\t<TextBox PasswordChar=\"*\" Watermark=\"${2:EnterYourPassword}\"/>"
+		]
+	},
+	"TextBlock": {
+		"prefix": "<TextBlock>",
+		"body": [
+			"<TextBlock>",
+			"\t$0",
+			"</TextBlock>"
+		]
+	},
+	"MenuFlyout": {
+		"prefix": "<Button.Flyout>",
+		"body": [
+			"<Button HorizontalAlignment=\"Center\">",
+			"\t<Button.Flyout>",
+			"\t\t<MenuFlyout>",
+			"\t\t\t<MenuItem Header=\"${1:MenuTitle}\"/>",
+			"\t\t\t<MenuItem Header=\"-\"/>",
+			"\t\t\t<MenuItem Header=\"${2:OtherTitle}\"/>",
+			"\t\t</MenuFlyout>",
+			"\t</Button.Flyout>",
+			"\tButton",
+			"</Button>"
+		]
+	},
+	"MenuItem": {
+		"prefix":"<MenuItem>",
+		"body": "<MenuItem Header=\"${1:MenuItemTitle}\"/>$0"
+	},
+	"Window": {
+		"prefix": "<Window>",
+		"body": [
+		"<Window",
+		"\txmlns=\"https://github.com/avaloniaui\"",
+        "\txmlns:x=\"http://schemas.microsoft.com/winfx/2006/xaml\"",
+		"\txmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\"",
+		"\tmc:Ignorable=\"d\" d:DesignWidth=\"800\" d:DesignHeight=\"450\"",
+		"\tx:Class=\"${1:YourNamespace}.MainWindow\"",
+		"\tTitle=\"$1\">",
+    	"\t<Grid>",
+        "\t\t$0",
+    	"\t</Grid>",
+		"</Window>"
+		]
+	}
+}
