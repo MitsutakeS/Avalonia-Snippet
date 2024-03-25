@@ -11,7 +11,7 @@
 	"StackLayout": {
 		"prefix": "<StackPanel>",
 		"body": [
-			"<StackPanel>",
+			"<StackPanel Margin=\"20\">",
 			"\t$0",
 			"</StackPanel>"
 		]
@@ -94,10 +94,27 @@
 		]
 	},
 	"TextBoxItem[PassWord]":{
-		"prefix": "<TextBox>",
+		"prefix": "<TextBoxItem_PassWord>",
 		"body": [
 			"\t<TextBlock Margin=\"0 5\"  FontFamily=\"Meiryo UI\">${1:Password}:</TextBlock>",
 			"\t<TextBox PasswordChar=\"*\" Watermark=\"${2:EnterYourPassword}\"/>"
+		]
+	},
+	"TextBoxItem[NumlricUpDown]":{
+		"prefix": "<TextBoxItem_NumericUpDown>",
+		"body": [
+			/* This is where the StackPanel needs to be. */
+			"<TextBlock Margin=\"0 5\">${1:TextBoxTitle}:</TextBlock>",
+			"<NumericUpDown Value=\"${2:0}\"/>"
+		]
+	},
+	"NumricUpDownWidget": {
+		"prefix": "<NumericUpDown>",
+		"body": [
+			"<StackPanel Margin=\"20\">",
+			"\t<TextBlock Margin=\"0 5\">${1:WidgetName}:</TextBlock>",
+			"\t<NumericUpDown Value=\"${2:0}\"/>",
+			"</StackPanel>"
 		]
 	},
 	"TextBlock": {
@@ -106,6 +123,21 @@
 			"<TextBlock>",
 			"\t$0",
 			"</TextBlock>"
+		]
+	},
+	"Menu": {
+		"prefix": "<Menu>",
+		"body": [
+			"<DockPanel>",
+			"<Menu DockPanel.Dock=\"Top\">",
+			"\t<MenuItem Header=\"_File\">",
+			"\t\t<MenuItem Header=\"_Open...\"/>",
+			"\t\t<Separator/>",
+			"\t\t<MenuItem Header=\"_Exit\"/>",
+			"\t</MenuItem>$0",
+			"</Menu>",
+			"<TextBlock/>",
+			"</DockPanel>"
 		]
 	},
 	"MenuFlyout": {
@@ -123,9 +155,17 @@
 			"</Button>"
 		]
 	},
-	"MenuItem": {
+	"MenuItem[Header]": {
 		"prefix":"<MenuItem>",
 		"body": "<MenuItem Header=\"${1:MenuItemTitle}\"/>$0"
+	},
+	"MenuItem[WithContent]":{
+		"prefix":"<MenuItem[WithContent]>",
+		"body": [
+			"<MenuItem Header=\"${1:HeaderName}\"",
+			"\t$0",
+			"</MenuItem>"
+		]
 	},
 	"Window": {
 		"prefix": "<Window>",
